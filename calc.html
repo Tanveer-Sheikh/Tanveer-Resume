@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Tanveer Sheikh | Resume </title>
+</head>
+
+<body>
+
+    <div class="container pt-5">
+        <h1>
+        <img src="calculator-solid.svg" alt="logo" style="width: 50px;">
+            Calculator...</h1>
+    </div>
+
+
+    <div class="container">
+
+        <div class="container px-0 row g-1">
+
+            <div class="container col-md-11">
+                <input class="rounded resu" type="text" id="result">
+            </div>
+
+            <div class="container col-md-1">
+                <button class="btn btn-primary btn-lg px-4  border border-dark border-4" onclick="clr()">clear</button>
+            </div>
+
+
+        </div>
+        <div class="container px-0 pt-2">
+
+            <table class="table table-bordered table-dark" border="1">
+                <tr>
+                    <td class="py-1 sym" onclick="calcu('(')"><h1>(</h1></td>
+                    <td class="py-1 sym" onclick="calcu(')')"><h1>)</h1></td>
+                    <td class="py-1 sym" onclick="calcu('**')"><h1>^</h1></td>
+                    <td class="py-1 sym" onclick="iclr()"><h1>&laquo;</h1></td>
+
+                </tr>
+
+                <tr>
+
+                    <td class="py-1 num" onclick="calcu('1')"><h1>1</h1></td>
+                    <td class="py-1 num" onclick="calcu('2')"><h1>2</h1></td>
+                    <td class="py-1 num" onclick="calcu('3')"><h1>3</h1></td>
+                    <td class="py-1 sym" onclick="calcu('+')"><h1>+</h1></td>
+                </tr>
+
+                <tr>
+                    <td class="py-1 num" onclick="calcu('4')"><h1>4</h1></td>
+                    <td class="py-1 num" onclick="calcu('5')"><h1>5</h1></td>
+                    <td class="py-1 num" onclick="calcu('6')"><h1>6</h1></td>
+                    <td class="py-1 sym" onclick="calcu('-')"><h1>-</h1></td>
+
+                </tr>
+
+
+                <tr>
+                    <td class="py-1 num" onclick="calcu('7')"><h1> 7 </h1></td>
+                    <td class="py-1 num" onclick="calcu('8')"><h1> 8 </h1></td>
+                    <td class="py-1 num" onclick="calcu('9')"><h1> 9 </h1></td>
+                    <td class="py-1 sym" onclick="calcu('*')"><h1> * </h1></td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="py-1 sym" onclick="calcu('/')"><h1>/</h1></td>
+                    <td class="py-1 num" onclick="calcu('0')"><h1>0</h1></td>
+                    <td class="py-1 sym" onclick="calcu('%')"><h1>%</h1></td>
+                    <td onclick="res()" style="background-color: blue; text-align: center;"><h1>=</h1></td>
+                </tr>
+
+
+
+
+
+            </table>
+
+        </div>
+
+    </div>
+<div class="container">
+    <a href="projects.html">
+        <button class="btn btn-lg btn-dark" >Back</button>
+    </a>
+
+</div>
+
+
+
+    <script>
+        function clr() {
+            document.getElementById("result").value = "";
+        }
+        function iclr() {
+            let s = document.getElementById("result").value
+
+            let p = s.slice(0, -1)
+            document.getElementById("result").value = p;
+        }
+        function calcu(val) {
+            document.getElementById("result").value += val;
+        }
+        function res() {
+            let x = document.getElementById("result").value;
+            let t = eval(x);
+            console.log(typeof (x))
+            document.getElementById("result").value = t;
+
+        }
+
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

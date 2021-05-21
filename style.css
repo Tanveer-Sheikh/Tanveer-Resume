@@ -1,0 +1,277 @@
+.bgsimage{
+
+    background-image: url(kristopher-roller-zepnJQycr4U-unsplash.jpg);
+     
+        width: 100vw;
+        position: absolute;
+       
+       
+    
+        
+        background-repeat: no-repeat;
+       
+        filter: blur(5px) ;
+        background-size: 100vw 100vh;
+
+        height: 100vh;
+  
+        
+
+
+} 
+.logoimg{
+    margin-left: 5%;
+    width: 50px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 56%;
+}
+.cardbg{
+    background-color: rgba(60, 49, 85 , 0.5);
+    
+}
+
+
+/* 
+Password Generator */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(204, 204, 204, 0.274);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.generateinput {
+    background: none;
+    border: none;
+    font-family: 'Freckle Face', cursive;
+    font-size: 23px;
+
+    background-position: center;
+    text-align: center;
+    background-color: rgba(248, 241, 240, 0.637);
+    color: rgb(0, 0, 0);
+}
+
+.ngs {
+    background-color: rgba(137, 43, 226, 0.658);
+}
+
+.textinput {
+    background-color: rgba(232, 216, 245, 0);
+
+    border: none;
+
+    cursor: pointer;
+}
+.num{
+    background-color: rgb(205, 248, 255)!important;
+    color: black;
+    text-align: center;
+}
+.sym{
+    background-color: rgb(126, 200, 202)!important;
+    color: black;
+    text-align: center;
+}
+.resu{
+    width: 100%;
+    font-size: 2rem;
+}
+
+/* STYLE FOR RACE GAME */
+
+.racebg{
+z-index: -1;
+position: absolute;
+background-image: url(racebg.webp);
+background-repeat: repeat;
+
+background-size: 100vw 100vh;
+
+width: 100%;
+    
+height: 100vh; 
+
+animation: backgroundScroll 12s linear infinite;
+animation-fill-mode: forwards;
+    /* background-image: url(racebg.webp);
+ background-size: 100vw 100vh;
+ background-repeat: repeat;
+ 
+    width: 100%;
+    
+    height: 100vh; */
+}
+
+@keyframes backgroundScroll {
+    
+    from{background-position: 0 0;}
+
+    to{background-position: -180px 0px;}
+    }
+
+
+.tank{
+    background-image: url(tanque_comic.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 4%;
+    left: 6%;
+    width: 10%;
+    animation: none;
+    height: 22%;
+}
+.dino{
+    background-image: url(40d4248a.svg);
+    
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 4%;
+    left: 80%;
+    width: 7%;
+    height: 50%;
+}
+.firing{
+    background-image: url(fire-alt-solid.svg);
+    
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 4%;
+    left: 6%;
+    width: 7%;
+    height: 20%;   
+}
+.animationFire{
+    animation: firing 0.9s linear;
+}
+@keyframes firing {
+    0%{
+        bottom: 16%;
+    }
+    50%{
+bottom: 40%;
+    }
+    100%{
+bottom: 16%;
+    }
+}
+
+.enemy{
+    background-image: url(40d4248a.svg);
+    visibility: hidden;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 4%;
+    left: 80%;
+    width: 7%;
+    height: 20%;
+    
+}
+.enemy2{
+    background-image: url(40d4248a.svg);
+    visibility: hidden;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    width: 7%;
+    height: 20%;
+}
+.animationTank{
+    animation: tank 0.9s linear;
+}
+@keyframes tank {
+    0%{
+        bottom: 16%;
+    }
+    50%{
+bottom: 40%;
+    }
+    100%{
+bottom: 16%;
+    }
+}
+.animationEnemy{
+    animation: enemy 6s linear infinite;
+}
+
+@keyframes enemy {
+ 0%{
+  left: 100vw;
+ }   
+ 100%{
+left: 0vw;
+ }
+}
+
+.animationEnemy2{
+    animation: enemy2 4s linear infinite;
+}
+
+@keyframes enemy2 {
+ 0%{
+  left: 100vw;
+ }   
+ 100%{
+left: 0vw;
+ }
+}
+
+
+
+.gameover{
+    visibility: hidden;
+}
